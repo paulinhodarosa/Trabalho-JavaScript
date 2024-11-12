@@ -1,0 +1,80 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Estilos do Cabeçalho */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Estilo da Imagem no Canto Superior Esquerdo */
+header img {
+    position: absolute;  /* Posicionamento absoluto */
+    top: 20px;            /* Distância do topo da tela */
+    left: 20px;           /* Distância da borda esquerda */
+    width: 100px;         /* Tamanho da imagem */
+    border-radius: 20%;   /* Borda arredondada */
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+/* Estilo do Formulário */
+form {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos da Lista */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 300px;
+    margin: 20px auto;
+}
+
+.container {
+    width: 90%;              /* O container ocupará 80% da largura da tela */
+    max-width: 1200px;       /* O container não ultrapassará 1200px de largura */
+    margin: 0 auto;          /* Centraliza o container na página */
+    padding: 90px;           /* Adiciona um espaçamento interno ao redor do conteúdo */
+    background-color: #f4f4f9; /* Cor de fundo do container */
+    border: 2px solid #ccc;  /* Borda cinza clara */
+    border-radius: 10px;      /* Bordas arredondadas */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+}   

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtro de Tarefas</title>
+    
+</head>
+<body>
+
+    <header>
+        <h1>TO DO LIST IFPR</h1>
+    </header>
+
+    <!-- Botões de Filtro -->
+    <div class="filter-container">
+        <button onclick="filterByPriority('alta')">Alta Prioridade</button>
+        <button onclick="filterByPriority('media')">Média Prioridade</button>
+        <button onclick="filterByPriority('baixa')">Baixa Prioridade</button>
+        <button onclick="resetFilter()">Mostrar Todas</button>
+    </div>
+
+    <!-- Lista de Atividades -->
+    <ul id="activitiesList">
+        <li class="activity" data-priority="alta">Arrumar a cama - Alta</li>
+        <li class="activity" data-priority="media">Limpar a cozinha - Média</li>
+        <li class="activity" data-priority="baixa">Passar aspirador na sala - Baixa</li>
+        <li class="activity" data-priority="media">Lavar a roupa - Média</li>
+        <li class="activity" data-priority="alta">Organizar a despensa - Alta</li>
+        <li class="activity" data-priority="baixa">Lavar a louça - Baixa</li>
+        <li class="activity" data-priority="alta">Trocar a roupa de cama - Alta</li>
+        <li class="activity" data-priority="media">Limpar os banheiros - Média</li>
+        <li class="activity" data-priority="baixa">Jogar lixo fora - Baixa</li>
+        <li class="activity" data-priority="media">Organizar o armário - Média</li>
+    </ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
