@@ -7,6 +7,42 @@ body {
     color: #333;
 }
 
+/* Estilos para os botões dentro da lista */
+button {
+    margin: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Estilos para os botões de ação */
+button.edit {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+}
+
+button.delete {
+    background-color: #f44336; /* Vermelho */
+    color: white;
+}
+
+button.select {
+    background-color: #2196F3; /* Azul */
+    color: white;
+}
+
+/* Estilos para a lista */
+li {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+h3 {
+    width: 1000px;
+}
+
 /* Estilos do Cabeçalho */
 header {
     background-color: #4CAF50;

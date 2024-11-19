@@ -16,11 +16,14 @@
         </header>
     </div>
 
-    <form action="https://www.google.com/search" method="get">
-        <input type="text" name="q" placeholder="Digite sua pesquisa" required>
-        <button type="submit">Pesquisar</button>
+    <form>
+        <input id="tarefas" type="text" placeholder="digite sua tarefa" required>
+        <button id="pesquisa" type="submit">Pesquisar</button>
 
-        <button type="submit">Status</button>
+        <button id="adicionar" type="submit">Adicionar</button>
+
+        <button id="desfazer" style="margin-top: 20px;">Desfazer</button>
+
         
     </form>
 
@@ -32,8 +35,9 @@
         </header>
 
         <section>
-            <h2>Atividades:
-            </h2>
+            <h2>Atividades:</h2>
+            <ul id="lista-tarefas"></ul>
+            <div id="prioridade-container" style="margin-top: 20px;"></div>
             <p>Este é um exemplo de como criar um container com HTML e CSS.</p>
         </section>
 
@@ -41,6 +45,6 @@
             <p>© 2024 Meu Site</p>
         </footer>
     </div>
-
 </body>
+<script src="lista.js"></script>
 </html>
