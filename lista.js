@@ -118,7 +118,7 @@ function exibirBotoesPrioridade() {
                 atualizarLista(); // Atualizar a lista de tarefas
                 exibirBotoesPrioridade(); // Atualizar os botões (caso a prioridade mude)
             });
-            prioridadeContainer.appendChild(btn);
+            prioridadeContainer.appendChild(btn)
         });
     }
 }
