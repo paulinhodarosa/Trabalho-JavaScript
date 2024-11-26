@@ -70,7 +70,7 @@ span {
     justify-content: center;
     align-items: center;
     height: 40px;
-    width: 58px;
+    width: 100px;
 }
 
 #ico-lupa {
@@ -123,7 +123,7 @@ header {
 }
 
 #input-pesquisas {
-    width: 410px;
+    width: 450px;
 }
 
 #tarefas {
