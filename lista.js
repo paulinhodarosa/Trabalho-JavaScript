@@ -16,12 +16,10 @@ botao_adc.addEventListener('click', function(e) {
 
     if (!conteudo) return;
 
-
-
     //cria elemento e atribui a lista
     let li = document.createElement('li');
     let mensagem = document.createElement('span'); 
-    mensagem.textContent = `${conteudo} - Prioridade ${prioridade.toUpperCase()}`;//modifica o texto
+    mensagem.textContent = `${conteudo}`;//modifica o texto
 
     let checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
@@ -76,7 +74,7 @@ botao_adc.addEventListener('click', function(e) {
 
    
 
-    checkbox.addEventListener('change', function() {
+checkbox.addEventListener('change', function() {
         
         lixeira.style.display = 'none';
         concluir.style.display = 'none';
@@ -93,7 +91,7 @@ botao_adc.addEventListener('click', function(e) {
         } else { 
             // li.style.textDecoration = 'none'; 
             li.style.backgroundColor = ''; 
-            mensagem.textContent = `${conteudo} - Prioridade ${prioridade.toUpperCase()}`; // Restaura o texto quando eu desmarco a checkbox
+            mensagem.textContent = `${conteudo}`; // Restaura o texto quando eu desmarco a checkbox
             lixeira.style.display = 'none'
             concluir.style.display = 'none'
 
