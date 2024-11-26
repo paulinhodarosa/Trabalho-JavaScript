@@ -63,28 +63,44 @@ botao_adc.addEventListener('click', function(e) {
         li.remove();
     })
 
+    let concluir = document.createElement('button')
+    concluir.classList.add('concluir');
+
+    concluir.addEventListener("click", function() {
+        li.remove();
+    })
+    
+
+
    
 
     checkbox.addEventListener('change', function() {
         
         lixeira.style.display = 'none';
+        concluir.style.display = 'none';
 
 
         if (checkbox.checked) {
-            li.style.textDecoration = 'line-through'; // Risca a tarefa
+            li.style.textDecoration = 'bold'; // Risca a tarefa
             li.style.backgroundColor = 'blue'; // Cor de fundo quando concluída
-            mensagem.textContent = `${conteudo} - TAREFA CONCLUÍDA\n`; // Muda o texto
+            mensagem.textContent = `${conteudo} - TAREFA SELECIONADA\n`; // Muda o texto
             lixeira.style.display = 'inline'
+            concluir.style.display = 'inline'
+
 
         } else { // quando a checkbox está desmarcada
             li.style.textDecoration = 'none'; // Remove o risco
             li.style.backgroundColor = ''; // Remove a cor de fundo
             mensagem.textContent = `${conteudo} - Prioridade ${prioridade.toUpperCase()}`; // Restaura o texto
             lixeira.style.display = 'none'
+            concluir.style.display = 'none'
+
             lixeira.remove();
 
         }
         li.appendChild(lixeira);
+        li.appendChild(concluir);
+
 
     });
 
