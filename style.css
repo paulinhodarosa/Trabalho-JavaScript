@@ -1,14 +1,10 @@
-/* Estilos Gerais */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f9;
     color: #333;
-    
 }
-
-
 
 #adicionar {
     height: 40px;
@@ -35,70 +31,63 @@ select {
     color: white;
     border-radius: 4px;
     font-weight: bold;
-
 }
 
 button.edit {
-    background-color: #4CAF50; 
+    background-color: #4CAF50;
     color: white;
 }
 
 button.delete {
-    background-color: #f44336; 
+    background-color: #f44336;
     color: white;
 }
 
 button.select {
-    background-color: #2196F3; 
+    background-color: #2196F3;
     color: white;
 }
 
 li {
-    display: flex; /* Alinhamento flexível */
-    align-items: center; /* Centraliza os itens verticalmente */
-    justify-content: space-between; /* Espaça os elementos */
-    padding: 10px; /* Adiciona espaçamento interno */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
     background-color: white;
-    border-radius: 5px; /* Bordas arredondadas */
+    border-radius: 5px;
     margin-bottom: 10px;
-    word-wrap: break-word; /* Permite que o texto quebre linhas */
+    word-wrap: break-word;
     font-weight: bold;
 }
 
 span {
-    flex-grow: 1; /* Faz com que o texto ocupe o espaço restante */
-    padding-right: 30px; /* Adiciona um pequeno espaço à direita do texto para o ícone */
+    flex-grow: 1;
+    padding-right: 30px;
 }
 
 #pesquisar {
-    display: flex;        /* Usar Flexbox para alinhar os itens */
-    justify-content: center; 
-    align-items: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 40px;
     width: 58px;
 }
 
 #ico-lupa {
     width: 30px;
-    height: 30px; 
+    height: 30px;
 }
 
-
-
-
 .lixeira, .editar_tarefa, .concluir {
-    display: inline-block; /* Certifica-se de que os botões são tratados como elementos de linha */
-    width: 32x;
+    display: inline-block;
+    width: 30px;
     height: 30px;
-    background-size: cover; /* Garante que o ícone se ajuste ao botão */
-    margin-left: 10px; /* Espaço entre os botões */
-    flex-shrink: 0; /* Impede que os botões sejam redimensionados */
-    align-self: center; /* Garante que os botões se alinhem ao centro do `li` */
-    background-size: contain; /* Ajusta o tamanho da imagem para caber no botão sem cortar */
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 30px;  /* Ajuste a largura */
-    height: 30px; /* Ajuste a altura */
+    background-size: contain;
+    margin-left: 10px;
+    flex-shrink: 0;
+    background-repeat: no-repeat; /* Garante que a imagem não se repita */
+    background-position: center; /* Alinha a imagem no centro do botão */
+    align-self: center;
     background-color: transparent;
 }
 
@@ -118,7 +107,6 @@ h3 {
     width: 1000px;
 }
 
-/* Estilos do Cabeçalho */
 header {
     background-color: #4CAF50;
     color: white;
@@ -127,11 +115,11 @@ header {
 }
 
 #form-pesquisar {
-    display: flex; /* Define o layout como flexível */
-    justify-content: baseline; /* Alinha os elementos ao início */
-    align-items: center; /* Alinha os elementos verticalmente no centro */
-    margin: 10px 20px; /* Adiciona espaçamento ao redor do formulário */
-    gap: 10px; /* Espaçamento entre os elementos */
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    margin: 10px 20px;
+    gap: 10px;
 }
 
 #input-pesquisas {
@@ -143,11 +131,11 @@ header {
 }
 
 header img {
-    position: absolute;  
-    top: 20px;            
-    left: 20px;           
-    width: 100px;         
-    border-radius: 20%;   
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+    border-radius: 20%;
     margin-bottom: 10px;
 }
 
@@ -156,7 +144,6 @@ h1 {
     margin: 0;
 }
 
-/* Estilo do Formulário */
 form {
     display: flex;
     justify-content: center;
@@ -186,48 +173,46 @@ button:hover {
     background-color: #45a049;
 }
 
-/* Estilos da Lista */
 ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: column;    /* Organiza os itens na vertical */
-    align-items: center;       /* Centraliza horizontalmente */
-    justify-content: center;   /* Centraliza verticalmente */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    max-width: 500px;          /* Limita a largura da lista */
-    margin: 20px auto;   
+    max-width: 500px;
+    margin: 20px auto;
 }
 
 .container {
-    width: 90%;              /* O container ocupará 80% da largura da tela */
-    max-width: 1200px;       /* O container não ultrapassará 1200px de largura */
-    margin: 0 auto; /* Centraliza o container na página */
-    align-items: center;         
-    padding: 90px;           /* Adiciona um espaçamento interno ao redor do conteúdo */
-    background-color: #f4f4f9; /* Cor de fundo do container */
-    border: 2px solid #ccc;  /* Borda cinza clara */
-    border-radius: 10px;      /* Bordas arredondadas */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
-}   
-
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    padding: 90px;
+    background-color: #f4f4f9;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
 
 li span {
-    flex-grow: 1; /* Faz o texto ocupar o espaço restante */
-    margin-left: 10px; /* Espaço entre o checkbox e o texto */
-    align-self: center; /* Garante alinhamento vertical */
-    text-align: start; /* Garante alinhamento à esquerda */
+    flex-grow: 1;
+    margin-left: 10px;
+    align-self: center;
+    text-align: start;
 }
 
 .pAlta, .pMedia, .pBaixa {
-    display: flex; /* Garante que os elementos sejam alinhados */
+    display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
     color: white;
     border-radius: 5px;
-    width: 600px; /* Ajusta à largura da lista */
+    width: 600px;
 }
 
 .pAlta {
@@ -241,3 +226,4 @@ li span {
 .pBaixa {
     background-color: green;
 }
+

@@ -18,19 +18,17 @@ botao_adc.addEventListener('click', function(e) {
 
 
 
-    // Criar elementos e adicioná-los na lista
+    //cria elemento e atribui a lista
     let li = document.createElement('li');
-    let mensagem = document.createElement('span'); // Criar um elemento separado para o texto
-    mensagem.textContent = `${conteudo} - Prioridade ${prioridade.toUpperCase()}`;
+    let mensagem = document.createElement('span'); 
+    mensagem.textContent = `${conteudo} - Prioridade ${prioridade.toUpperCase()}`;//modifica o texto
 
-    // Criar checkbox
     let checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
-    checkbox.style.marginRight = '10px'; // Margem para separar o checkbox
+    checkbox.style.marginRight = '10px'; 
 
-    // Adicionando classe com base na prioridade
     if (prioridade === 'alta') {
-        li.classList.add('pAlta');
+        li.classList.add('pAlta'); //da um id para o elemento
     }
     if (prioridade === 'media') {
         li.classList.add('pMedia');
@@ -39,8 +37,8 @@ botao_adc.addEventListener('click', function(e) {
         li.classList.add('pBaixa');
     }
 
-    // Adiciona o texto à tarefa
-    ultima_tarefa_adicionada = li;
+    // Adiciona o texto a tarefa
+    ultima_tarefa_adicionada = li; // pega o ultimo item adicionado
     li.appendChild(mensagem);
 
     let editar_tarefa = document.createElement('button')
@@ -54,20 +52,24 @@ botao_adc.addEventListener('click', function(e) {
         li.remove();
     })
 
-    // Adiciona o checkbox e a lixeira ao item da lista
+    // Adiciona o checkbox e os botoes concluir e lixeira ao item da lista
     li.prepend(checkbox);
     let lixeira = document.createElement('button')
     lixeira.classList.add('lixeira');
 
     lixeira.addEventListener("click", function() {
-        li.remove();
+        li.remove(); // remove a tarefa selecionada
+        alert("Tarefa removida  com sucesso")
+
     })
 
     let concluir = document.createElement('button')
     concluir.classList.add('concluir');
 
     concluir.addEventListener("click", function() {
-        li.remove();
+        
+        li.remove(); //tambem remove a tarefa selecionada
+        alert("Tarefa concluída com sucesso")
     })
     
 
@@ -81,17 +83,17 @@ botao_adc.addEventListener('click', function(e) {
 
 
         if (checkbox.checked) {
-            li.style.textDecoration = 'bold'; // Risca a tarefa
-            li.style.backgroundColor = 'blue'; // Cor de fundo quando concluída
-            mensagem.textContent = `${conteudo} - TAREFA SELECIONADA\n`; // Muda o texto
+            li.style.textDecoration = 'bold'; 
+            li.style.backgroundColor = 'blue'; 
+            mensagem.textContent = `${conteudo} - TAREFA SELECIONADA\n`; // altera o texto
             lixeira.style.display = 'inline'
             concluir.style.display = 'inline'
 
 
-        } else { // quando a checkbox está desmarcada
-            li.style.textDecoration = 'none'; // Remove o risco
-            li.style.backgroundColor = ''; // Remove a cor de fundo
-            mensagem.textContent = `${conteudo} - Prioridade ${prioridade.toUpperCase()}`; // Restaura o texto
+        } else { 
+            // li.style.textDecoration = 'none'; 
+            li.style.backgroundColor = ''; 
+            mensagem.textContent = `${conteudo} - Prioridade ${prioridade.toUpperCase()}`; // Restaura o texto quando eu desmarco a checkbox
             lixeira.style.display = 'none'
             concluir.style.display = 'none'
 
@@ -108,24 +110,24 @@ botao_adc.addEventListener('click', function(e) {
     li.appendChild(checkbox);
     li.appendChild(mensagem);
     li.appendChild(editar_tarefa)
-    // Adiciona o item à lista
+    // adiciona o item a lista
     lista_tarefas.appendChild(li);
 
-    // Limpar o campo de entrada
+    // limpa o campo de entrada assim que a tarefa é adicioonada
     tarefa.value = '';
 });
 
 botao_pesq.addEventListener('click', function(e) {
     e.preventDefault();
     let pesquisas = document.getElementById('input-pesquisas');
-    let conteudo_pesquisa = pesquisas.value.trim().toLowerCase(); // Texto digitado
-    let tarefas = document.querySelectorAll('#lista-tarefas li'); // Seleciona todas as tarefas
+    let conteudo_pesquisa = pesquisas.value.trim().toLowerCase(); // case-sensitive
+    let tarefas = document.querySelectorAll('#lista-tarefas li'); // transforma todas as atividades em uma lista - nodelist
 
     tarefas.forEach(function(tarefa) {
         if (conteudo_pesquisa === '' || tarefa.textContent.toLowerCase().includes(conteudo_pesquisa)) {
-            tarefa.style.display = ''; // Mostra a tarefa se corresponder ou se o campo está vazio
+            tarefa.style.display = ''; // Mostra a tarefa filtrada ou todas se o campo estiver vazio
         } else {
-            tarefa.style.display = 'none'; // Esconde a tarefa se não corresponder
+            tarefa.style.display = 'none'; // nao aparece nenhuma tarefa se não conter o filtro
         }
     });
 });
