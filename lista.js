@@ -30,7 +30,7 @@ botao_adc.addEventListener('click', function(e) {
     if (prioridade === 'alta') {
         li.classList.add('pAlta'); //da um id para o elemento
     }
-    if (prioridade === 'media') {
+    if (prioridade === 'media') { //adiciona a checkbox como primeiro elemento da li
         li.classList.add('pMedia');
     }
     if (prioridade === 'baixa') {
@@ -53,7 +53,7 @@ botao_adc.addEventListener('click', function(e) {
     })
 
     // Adiciona o checkbox e os botoes concluir e lixeira ao item da lista
-    li.prepend(checkbox);
+    li.prepend(checkbox); //adiciona a checkbox como primeiro elemento da li
     let lixeira = document.createElement('button')
     lixeira.classList.add('lixeira');
 
